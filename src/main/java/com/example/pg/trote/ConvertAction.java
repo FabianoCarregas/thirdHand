@@ -1,13 +1,21 @@
 package com.example.pg.trote;
 
 import static com.example.pg.trote.StringUtils.*;
-import static com.example.pg.trote.StringUtils.sanitizeToInt;
+import static com.example.pg.trote.StringUtils.sanitizeToDouble;
 
 public class ConvertAction {
 
     public static String toEmFormat(String px, double base) {
-       double em = sanitizeToInt(px) / base;
-        String converted = String.valueOf(String.format("%.4f", em));
+       double em = sanitizeToDouble(px) / base;
+        String converted = formattedValue(em);
        return toEmTag(converted);
+    }
+
+    private static String toEmTag(String str) {
+        return str.concat("em");
+    }
+
+    private static String toRemTag(String str) {
+        return str.concat("em");
     }
 }

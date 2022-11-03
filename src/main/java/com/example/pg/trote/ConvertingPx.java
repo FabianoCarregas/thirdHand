@@ -23,11 +23,12 @@ public class ConvertingPx extends AnAction {
         String text = caretModel.getCurrentCaret().getSelectedText();
         assert text != null;
 
-        String converted = ConvertAction.toEmFormat(text, 12);
+        String converted = ConvertAction.toEmFormat(text, 11);
         replace(project, document, start, end, converted);
     }
 
     private void replace(Project project, Document document, int start, int end, String arg) {
         WriteCommandAction.runWriteCommandAction(project, () -> document.replaceString(start, end, arg));
     }
+
 }
