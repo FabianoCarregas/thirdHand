@@ -1,4 +1,4 @@
-package com.example.pg;
+package com.example.pg.gi;
 
 import com.intellij.ide.BrowserUtil;
 import com.intellij.openapi.actionSystem.AnAction;

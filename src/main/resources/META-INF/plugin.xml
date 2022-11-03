@@ -28,9 +28,14 @@
 
     </extensions>
     <actions>
-        <action id="com.example.pg.GoogleIt" class="com.example.pg.GoogleIt" text="Google this please!">
+        <action id="com.example.pg.gi.GoogleIt" class="com.example.pg.gi.GoogleIt" text="Google this please!">
             <add-to-group group-id="EditorPopupMenu" anchor="last"/>
             <keyboard-shortcut keymap="$default" first-keystroke="ctrl alt G"/>
+        </action>
+        <action id="com.example.pg.trote.ConvertingPx" class="com.example.pg.trote.ConvertingPx" text="toRemOrToEm"
+                description="trote">
+            <add-to-group group-id="EditorPopupMenu" anchor="last"/>
+            <keyboard-shortcut keymap="$default" first-keystroke="ctrl alt E"/>
         </action>
     </actions>
 </idea-plugin>
