@@ -12,6 +12,7 @@ public class StringUtils {
         String px = str.replaceAll(REMOVE_ALL_LETTERS, "");
         return parseDouble(px);
     }
+
      public static String formattedValue(double numb) {
          DecimalFormat decimalFormat = new DecimalFormat("0.####");
          return decimalFormat.format(Double.valueOf(numb));

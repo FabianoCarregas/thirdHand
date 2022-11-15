@@ -4,11 +4,16 @@ import com.intellij.openapi.actionSystem.AnAction;
 import com.intellij.openapi.actionSystem.AnActionEvent;
 import com.intellij.openapi.actionSystem.CommonDataKeys;
 import com.intellij.openapi.command.WriteCommandAction;
-import com.intellij.openapi.editor.*;
+import com.intellij.openapi.editor.CaretModel;
+import com.intellij.openapi.editor.Document;
+import com.intellij.openapi.editor.Editor;
+import com.intellij.openapi.editor.SelectionModel;
 import com.intellij.openapi.project.Project;
 import org.jetbrains.annotations.NotNull;
 
-public class ConvertingPx extends AnAction {
+import static com.example.pg.trote.BaseCalculation.baseValue;
+
+public class ConvertingRem extends AnAction {
 
     @Override
     public void actionPerformed(@NotNull AnActionEvent e) {
@@ -23,7 +28,7 @@ public class ConvertingPx extends AnAction {
         String text = caretModel.getCurrentCaret().getSelectedText();
         assert text != null;
 
-        String converted = ConvertAction.toEmFormat(text, 11);
+        String converted = ConvertAction.toRemFormat(text, baseValue);
         replace(project, document, start, end, converted);
     }
 

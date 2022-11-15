@@ -11,11 +11,17 @@ public class ConvertAction {
        return toEmTag(converted);
     }
 
+    public static String toRemFormat(String px, double base) {
+        double em = sanitizeToDouble(px) / base;
+        String converted = formattedValue(em);
+        return toRemTag(converted);
+    }
+
     private static String toEmTag(String str) {
         return str.concat("em");
     }
 
     private static String toRemTag(String str) {
-        return str.concat("em");
+        return str.concat("rem");
     }
 }
