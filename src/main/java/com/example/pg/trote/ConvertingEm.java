@@ -25,7 +25,8 @@ public class ConvertingEm extends AnAction {
         String text = caretModel.getCurrentCaret().getSelectedText();
         assert text != null;
 
-        String converted = ConvertAction.toEmFormat(text, baseValue);
+        String em = "em";
+        String converted = ConvertAction.convertValue(text, em, baseValue);
         replace(project, document, start, end, converted);
     }
 

@@ -28,7 +28,8 @@ public class ConvertingRem extends AnAction {
         String text = caretModel.getCurrentCaret().getSelectedText();
         assert text != null;
 
-        String converted = ConvertAction.toRemFormat(text, baseValue);
+        String rem = "rem";
+        String converted = ConvertAction.convertValue(text, rem, baseValue);
         replace(project, document, start, end, converted);
     }
 

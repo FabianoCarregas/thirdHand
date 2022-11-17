@@ -5,23 +5,14 @@ import static com.example.pg.trote.StringUtils.sanitizeToDouble;
 
 public class ConvertAction {
 
-    public static String toEmFormat(String px, double base) {
+    public static String convertValue(String str, String type, double base) {
+        String value = calculateByBase(str, base);
+        return value.concat(type);
+    }
+
+    private static String calculateByBase(String px, double base) {
        double em = sanitizeToDouble(px) / base;
-        String converted = formattedValue(em);
-       return toEmTag(converted);
+       return toValidValue(em);
     }
 
-    public static String toRemFormat(String px, double base) {
-        double em = sanitizeToDouble(px) / base;
-        String converted = formattedValue(em);
-        return toRemTag(converted);
-    }
-
-    private static String toEmTag(String str) {
-        return str.concat("em");
-    }
-
-    private static String toRemTag(String str) {
-        return str.concat("rem");
-    }
 }

@@ -1,7 +1,6 @@
 package com.example.pg.trote;
 
 import java.text.DecimalFormat;
-
 import static java.lang.Double.*;
 
 public class StringUtils {
@@ -13,7 +12,7 @@ public class StringUtils {
         return parseDouble(px);
     }
 
-     public static String formattedValue(double numb) {
+     public static String toValidValue(double numb) {
          DecimalFormat decimalFormat = new DecimalFormat("0.####");
          return decimalFormat.format(Double.valueOf(numb));
    }
