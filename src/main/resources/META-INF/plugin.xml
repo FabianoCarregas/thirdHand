@@ -28,9 +28,24 @@
 
     </extensions>
     <actions>
-        <action id="com.example.pg.GoogleIt" class="com.example.pg.GoogleIt" text="Google this please!">
+        <action id="com.example.pg.gi.GoogleIt" class="com.example.pg.gi.GoogleIt" text="Google this please!">
             <add-to-group group-id="EditorPopupMenu" anchor="last"/>
             <keyboard-shortcut keymap="$default" first-keystroke="ctrl alt G"/>
+        </action>
+        <action id="com.example.pg.trote.ConvertingEm" class="com.example.pg.trote.ConvertingEm" text="toEm"
+                description="trote">
+            <add-to-group group-id="EditorPopupMenu" anchor="last"/>
+            <keyboard-shortcut keymap="$default" first-keystroke="ctrl alt E"/>
+        </action>
+        <action id="com.example.pg.trote.ConvertingRem" class="com.example.pg.trote.ConvertingRem" text="toRem"
+                description="trote">
+            <add-to-group group-id="EditorPopupMenu" anchor="last"/>
+            <keyboard-shortcut keymap="$default" first-keystroke="ctrl alt R"/>
+        </action>
+        <action id="inputValueCalculate" class="com.example.pg.trote.BaseCalculation" text="inputValue"
+                description="base to calculate">
+            <add-to-group group-id="ToolsMenu" anchor="first"/>
+            <keyboard-shortcut keymap="$default" first-keystroke="ctrl alt Q"/>
         </action>
     </actions>
 </idea-plugin>
